@@ -30,7 +30,7 @@ pip install librosa==0.7.2
 pip install tqdm 
 pip intsall einops
 ```
-or, You select option
+or, You select one-shot option
 ```
 conda env create -f pakages.yml
 ```
