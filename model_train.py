@@ -112,7 +112,7 @@ class TRAINER(object):
 
 
 if __name__ == "__main__":
-    def options():
+    def options(config):
         parser = argparse.ArgumentParser(description = "Input optional guidance for training")
         parser.add_argument("--epoch", 
             default = 200, type = int, help = "모델의 에포크")
@@ -126,7 +126,7 @@ if __name__ == "__main__":
         parser.add_argument("--model", 
             default = "stft", type = str, help = ["stft", "mfcc"])
         parser.add_argument("--cha", 
-            default = [1, 16, 24, 24, 32, 32, 48, 48], type = list, help = "모델 레이어의 채널 리스트")
+            default = config["tc-resnet14"], type = list, help = "모델 레이어의 채널 리스트")
         parser.add_argument("--scale", 
             default = 1.5, type = int, help = "채널의 스케일링")
         parser.add_argument("--freq", 
@@ -136,4 +136,8 @@ if __name__ == "__main__":
         args = parser.parse_args()
         return args
 
-    TRAINER(options()).model_train()
+    config = {
+        "tc-resnet8": [1, 16, 24, 32, 48],
+        "tc-resnet14": [1, 16, 24, 24, 32, 32, 48, 48]}
+        
+    TRAINER(options(config)).model_train()
