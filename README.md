@@ -2,9 +2,9 @@
 - [TC-Resnet Official](https://github.com/hyperconnect/TC-ResNet)  
 - [TC-Resnet Paper](https://arxiv.org/pdf/1904.03814.pdf)  
   
-Impelmentation of Keyword Spotting Speech Neural Network  
-Original repository is tensorflow version  
-So, This repository gives you pytorch version  
+TC-Resnet is speech deep neural network for KWS task  
+Original repository is tensorflow version code  
+So, This repository gives you pytorch version code  
 # Requirements
 ```
 pytorch == 1.8.0
