@@ -18,11 +18,12 @@ numba == 0.48
 librosa == 0.7.2
 ```
 ### Setting enviorments
-First, Create conda enviorment
+1. Install conda and setting enviorment
 ```
+bash conda_install.sh
 conda create -n tc-resnet python=3.8
 ```
-Second, Install some packages
+2. Install some packages
 ```
 conda install pytorch torchvision torchaudio cudatoolkit=11.1 -c pytorch -c conda-forge
 pip install numba==0.48
@@ -30,7 +31,7 @@ pip install librosa==0.7.2
 pip install tqdm 
 pip intsall einops
 ```
-or, You can select one-shot option
+3. Or, You can select one-shot option
 ```
 conda env create -f pakages.yml
 ```
