@@ -20,7 +20,7 @@ librosa == 0.7.2
 ### Setting Enviorments
 First, Create conda enviorment
 ```
-conda create -n speech python=3.8
+conda create -n tc-resnet python=3.8
 ```
 Second, Install some packages
 ```
