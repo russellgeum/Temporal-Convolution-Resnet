@@ -92,13 +92,13 @@ class TCResNet(nn.Module):
 
 
 class STFT_TCResnet(nn.Module):
-    def __init__(self, filter_length, hop_length, bins, channel_scale, num_classes):
+    def __init__(self, filter_length, hop_length, bins, channels, channel_scale, num_classes):
         super(STFT_TCResnet, self).__init__()
         sampling_rate      = 16000
         self.filter_length = filter_length
         self.hop_length    = hop_length
         self.bins          = bins
-        self.channels      = [16, 24, 32, 48]
+        self.channels      = channels
         self.channel_scale = channel_scale
         self.num_classes   = num_classes
         
@@ -119,11 +119,11 @@ class STFT_TCResnet(nn.Module):
 
 
 class MFCC_TCResnet(nn.Module):
-    def __init__(self, bins = 40, channel_scale = 1, num_classes = 12):
+    def __init__(self, bins: int, channels, channel_scale: int, num_classes = 12):
         super(MFCC_TCResnet, self).__init__()
         self.sampling_rate = 16000
         self.bins          = bins
-        self.channels      = [16, 24, 32, 48]
+        self.channels      = channels
         self.channel_scale = channel_scale
         self.num_classes   = num_classes
         
