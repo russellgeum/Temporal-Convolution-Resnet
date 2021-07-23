@@ -5,7 +5,7 @@
 TC-Resnet is speech deep neural network for KWS task  
 Original repository is tensorflow version code  
 So, This repository gives you pytorch version code  
-# Requirements
+### Requirements
 ```
 pytorch == 1.8.0
 torchaudio == 0.8.0
@@ -17,7 +17,7 @@ einops
 numba == 0.48
 librosa == 0.7.2
 ```
-# Setting Enviorments
+### Setting Enviorments
 First, Create conda enviorment
 ```
 conda create -n speech python=3.8
@@ -34,11 +34,11 @@ or, You select one-shot option
 ```
 conda env create -f pakages.yml
 ```
-# Preparing Dataset
+### Preparing Dataset
 ```
 bash download.sh
 ```
-# Training model
+### Training model
 ```
 python model_train.py
 ```
