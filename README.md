@@ -17,7 +17,7 @@ einops
 numba == 0.48
 librosa == 0.7.2
 ```
-### Setting Enviorments
+### Setting enviorments
 First, Create conda enviorment
 ```
 conda create -n tc-resnet python=3.8
@@ -34,7 +34,7 @@ or, You select one-shot option
 ```
 conda env create -f pakages.yml
 ```
-### Preparing Dataset
+### Preparing dataset
 ```
 bash download.sh
 ```
