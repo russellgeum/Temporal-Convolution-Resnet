@@ -1,0 +1,17 @@
+# To run: conda env create -f environment.yml
+# freely change the pytorch, cudatoolkit version, as you preferred.
+# only works with tqdm==4.40.0 for now.
+name: tc-resnet
+channels:
+    - pytorch
+    - conda-forge
+dependencies:
+    - python=3.8
+    - pytorch
+    - torchvision
+    - torchaudio
+    - cudatoolkit=11.1
+    - tqdm
+    - einops
+    - numba==0.48
+    - librosa==0.7.2
