@@ -7,9 +7,11 @@ Original repository is tensorflow version
 So, This repository gives you pytorch version  
 # Requirements
 ```
-pytorch == 1.8.0 torchaudio == 0.8.0
+pytorch == 1.8.0
+torchaudio == 0.8.0
 or
-pytorch == 1.9.0 torchaudio == 0.9.0
+pytorch == 1.9.0
+torchaudio == 0.9.0
 tqdm
 einops
 numba == 0.48
