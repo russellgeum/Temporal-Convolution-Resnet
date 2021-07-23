@@ -1,6 +1,7 @@
 # Temporal-Convolution Resnet (Pytorch Ver)
 - [Official](https://github.com/hyperconnect/TC-ResNet)  
 - [TC-Resnet Paper](https://arxiv.org/pdf/1904.03814.pdf)  
+  
 Impelmentation of Keyword Spotting Speech Neural Network  
 Original repository is tensorflow version  
 So, This repository gives you pytorch version  
