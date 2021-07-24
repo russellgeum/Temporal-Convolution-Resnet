@@ -41,7 +41,7 @@ class TRAINER(object):
 
         if self.opt.model == "stft":
             self.model = STFT_TCResnet(
-                filter_length = 512, hop_length = 257, bins = 257, 
+                filter_length = 256, hop_length = 129, bins = 129, 
                 channels = self.opt.cha, channel_scale = self.opt.scale, num_classes = 12).to("cuda:0")
         elif self.opt.model == "mfcc":
             self.model = MFCC_TCResnet(
@@ -104,7 +104,7 @@ class TRAINER(object):
 
         if (self.epo + 1) % self.opt.freq == 0:
             torch.save(self.model.state_dict(), 
-                os.path.join(save_directory, "model" + str(epoch+1) + ".pt"))
+                os.path.join(save_directory, "model" + str(self.epoch+1) + ".pt"))
 
         if (self.epo + 1) == self.epoch:
             torch.save(self.model.state_dict(), os.path.join(save_directory, "last.pt"))
@@ -119,16 +119,16 @@ if __name__ == "__main__":
         parser.add_argument("--lr", 
             default = 0.1, type = float, help = "러닝 레이트")
         parser.add_argument("--batch", 
-            default = 512, type = int, help = "배치 사이즈")
+            default = 128, type = int, help = "배치 사이즈")
         parser.add_argument("--step", 
             default = 30, type = int, help = "스텝 수")
 
         parser.add_argument("--model", 
             default = "stft", type = str, help = ["stft", "mfcc"])
         parser.add_argument("--cha", 
-            default = config["tc-resnet14"], type = list, help = "모델 레이어의 채널 리스트")
+            default = config["tc-resnet8"], type = list, help = "모델 레이어의 채널 리스트")
         parser.add_argument("--scale", 
-            default = 1.5, type = int, help = "채널의 스케일링")
+            default = 3, type = int, help = "채널의 스케일링")
         parser.add_argument("--freq", 
             default = 30, type = int, help = "저장하는 빈도수")
         parser.add_argument("--save",   
@@ -139,5 +139,5 @@ if __name__ == "__main__":
     config = {
         "tc-resnet8": [1, 16, 24, 32, 48],
         "tc-resnet14": [1, 16, 24, 24, 32, 32, 48, 48]}
-        
+
     TRAINER(options(config)).model_train()
