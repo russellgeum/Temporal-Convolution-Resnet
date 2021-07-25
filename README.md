@@ -2,7 +2,7 @@
 - [TC-Resnet Official](https://github.com/hyperconnect/TC-ResNet)  
 - [TC-Resnet Paper](https://arxiv.org/pdf/1904.03814.pdf)  
   
-TC-Resnet is speech deep neural network for KWS task  
+TC-Resnet is speech deep neural network for KWS task (Hyperconnect)  
 Original repository is tensorflow version code  
 So, This repository gives you pytorch version code  
 ### Requirements
