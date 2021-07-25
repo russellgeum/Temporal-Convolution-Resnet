@@ -102,6 +102,10 @@ class TRAINER(object):
         if not os.path.isdir(save_directory):
             os.makedirs(save_directory)
 
+        if self.loss_name["valid_accuracy"] >= 92.0:
+            torch.save(self.mode.state_dict(),
+                os.path.join(save_directory, "best_" + str(self.loss_name["valid_accuracy"]) + ".pt"))
+
         if (self.epo + 1) % self.opt.freq == 0:
             torch.save(self.model.state_dict(), 
                 os.path.join(save_directory, "model" + str(self.epoch+1) + ".pt"))
@@ -117,7 +121,7 @@ if __name__ == "__main__":
         parser.add_argument("--epoch", 
             default = 200, type = int, help = "모델의 에포크")
         parser.add_argument("--lr", 
-            default = 0.1, type = float, help = "러닝 레이트")
+            default = 0.05, type = float, help = "러닝 레이트")
         parser.add_argument("--batch", 
             default = 128, type = int, help = "배치 사이즈")
         parser.add_argument("--step", 
