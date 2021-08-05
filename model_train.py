@@ -141,7 +141,7 @@ if __name__ == "__main__":
         return args
 
     config = {
-        "tc-resnet8": [1, 16, 24, 32, 48],
-        "tc-resnet14": [1, 16, 24, 24, 32, 32, 48, 48]}
+        "tc-resnet8": [16, 24, 32, 48],
+        "tc-resnet14": [16, 24, 24, 32, 32, 48, 48]}
 
     TRAINER(options(config)).model_train()
