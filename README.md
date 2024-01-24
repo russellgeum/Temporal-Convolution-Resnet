@@ -1,4 +1,4 @@
-# Temporal-Convolution Resnet (Pytorch)
+# Temporal-Convolution Resnet (PyTorch)
 - [TC-Resnet Official](https://github.com/hyperconnect/TC-ResNet)  
 - [TC-Resnet Paper](https://arxiv.org/pdf/1904.03814.pdf)  
   
